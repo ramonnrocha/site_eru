@@ -135,6 +135,7 @@ header .stats  {
   margin-inline: auto;
   padding-inline: auto;
   border-radius: 4rem;
+  margin-bottom: 8rem;
 }
 
 header .stats ul {
@@ -269,4 +270,18 @@ body.menu-expanded .logo,
 body.menu-expanded button {
   position: relative;
   z-index: 100;
+}
+
+/*=== FOOTER =================================*/
+footer {
+  padding-block: 8rem;
+  background-color: var(--primary-color);
+  width: 100vw;
+  text-decoration: none;
+  color: white;
+  
+}
+
+footer p {
+  margin-bottom: 0
 }
