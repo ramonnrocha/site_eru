@@ -17,6 +17,10 @@
   --nav-heigth:10rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 100%;
@@ -49,7 +53,7 @@ header {
 
 
 
-header h1 {
+#home h1 {
   font-size: 3.4rem;
   line-height: 130%;
   color: white;
@@ -57,21 +61,21 @@ header h1 {
 
 }
 
-header h4 {
+#home  h4 {
   font-size: 1.4rem;
   color: white;
   margin-bottom: 2.4rem;
 
 }
  
-header p {
+#home  p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
   margin-bottom: 2.4rem;
 }
 
-header button {
+#home  button {
   background: var(--yellow-dark);
   border: none;
   border-radius: 0.8rem;
@@ -85,16 +89,16 @@ header button {
 
 }
 
-img {
+#home  img {
   max-width: 36rem;
 }
 
-.primary-header {
+#home .primary-header {
   margin-bottom: 3.6rem;
   margin-top: 0;
 }
 
-.primary-header::before {
+#home .primary-header::before {
   content: '';
   width: 100vw;
   height: calc(40rem + var(--nav-heigth));
@@ -109,7 +113,7 @@ img {
 
 
 
-.icons {
+#home .icons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,12 +127,12 @@ img {
   margin-inline: auto;
 }
 
-.second-header {
+#home .second-header {
   margin-bottom: 3.6rem;
   margin-top: 0;
 }
 
-header .stats  {
+#home  .stats  {
   background-color: var(--secondy-color);
   width: 100%;
   height: 40rem;
@@ -138,7 +142,7 @@ header .stats  {
   margin-bottom: 8rem;
 }
 
-header .stats ul {
+#home  .stats ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,6 +201,10 @@ body.menu-expanded .open-menu {
   visibility: hidden;
 }
 
+.menu {
+  transform: translateY(100%);
+}
+
 body.menu-expanded > :not(nav){
   display: none;
 }
@@ -220,6 +228,8 @@ body.menu-expanded .menu {
   width: 102vw;
   height: 100vh;
   
+  transition: transform 200ms;
+  transform: translateY(0%);
 
 }
 
@@ -279,7 +289,7 @@ footer {
   width: 100vw;
   text-decoration: none;
   color: white;
-  
+
 }
 
 footer p {
