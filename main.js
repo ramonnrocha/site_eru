@@ -17,5 +17,10 @@ function closeMenu () {
 }
 
 ScrollReveal({
-  
-}).reveal('#home');
+  origin: 'bottom',
+  duration: 1000,
+}).reveal(`
+  #home, 
+  #home .primary-header,
+  #home .secondy-header, 
+  #home .stats`)
