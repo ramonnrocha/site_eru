@@ -1,0 +1,272 @@
+/*=== GERAL =================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color : hsl(227, 97%, 23%);
+  --secondy-color : hsl(207, 89%, 86%);
+  --yellow-dark : hsl(29, 99%, 61%);
+  --yellow-ligth : hsl(47, 99%, 61%);
+  --blue-ligth : hsl(230, 53%, 82%);
+  --color-text : hsl(210, 11%, 15%);
+  font-size: 62.5%;
+
+  --nav-heigth:10rem;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+  
+}
+
+.wrapper {
+  width: 37.5rem;
+  margin-inline: auto;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+/*================ header ========= */
+
+header {
+  margin-top: calc(4.1rem + var(--nav-heigth));
+
+}
+
+
+
+header h1 {
+  font-size: 3.4rem;
+  line-height: 130%;
+  color: white;
+  margin-bottom: 2.4rem;
+
+}
+
+header h4 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 2.4rem;
+
+}
+ 
+header p {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+header button {
+  background: var(--yellow-dark);
+  border: none;
+  border-radius: 0.8rem;
+  margin-bottom: 6rem;
+  width: 20.3rem;
+  height: 4.2rem;
+  color: var(--color-text);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+img {
+  max-width: 36rem;
+}
+
+.primary-header {
+  margin-bottom: 3.6rem;
+  margin-top: 0;
+}
+
+.primary-header::before {
+  content: '';
+  width: 100vw;
+  height: calc(40rem + var(--nav-heigth));
+  background-color: var(--primary-color);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+}
+
+
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+  margin-top: 4.8rem;
+  margin-bottom: 3rem ;
+}
+
+.wrapper {
+  width: 37.5rem;
+  margin-inline: auto;
+}
+
+.second-header {
+  margin-bottom: 3.6rem;
+  margin-top: 0;
+}
+
+header .stats  {
+  background-color: var(--secondy-color);
+  width: 100%;
+  height: 40rem;
+  margin-inline: auto;
+  padding-inline: auto;
+  border-radius: 4rem;
+}
+
+header .stats ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8rem;
+  margin-top: 4.8rem;
+  margin-bottom: 3rem ;
+  
+}
+
+/* ================= NAVGATION =========== */
+
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  width: 100vw;
+
+  z-index: 100;
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background: var(--primary-color);
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+nav .logo {
+  margin-top: 6px;
+}
+
+
+/* ====================== MENU EXPANDED ============ */
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded > :not(nav){
+  display: none;
+}
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+body.menu-expanded .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  width: 102vw;
+  height: 100vh;
+  
+
+}
+
+body.menu-expanded nav {
+  position: relative;
+
+}
+
+.menu ul:nth-child(1) { 
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+  margin-top: 10rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu .button {
+  background-color: white;
+  border-radius: 4rem;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  margin-top: 4.8rem;
+  margin-bottom: 5rem;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
