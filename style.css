@@ -492,12 +492,14 @@ footer .social-links {
 
   .col-a {
     grid-area: A;
+    padding-top: 4rem;
     padding-bottom: 10rem;
   }
 
   .col-b {
     grid-area: B;
-    padding-bottom: 15rem;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
   }
 
   section {
